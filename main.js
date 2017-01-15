@@ -65,6 +65,8 @@ taginput_el.addEventListener('keydown', function(e) {
 		if(value != '') {
 			createTag(value);
 			this.value = '';
+		}else if(e.keyCode == 13) {
+			generate();
 		}
 		setTimeout(function() {
 			taginput_el.value = '';

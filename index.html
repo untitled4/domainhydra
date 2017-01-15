@@ -2,17 +2,28 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Domain Name Generator</title>
+		<title>DomainHydra :: Domain Name Generator</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-48179034-7', 'auto');
+			ga('send', 'pageview');
+
+		</script>
 
 		<style>
 			html, body {
 				margin: 0;
 				padding: 0;
-				width: 100%;
-				height: 100%;
+				min-width: 100%;
+				/*min-height: 100%;*/
 
 				font-family: "Rubik", sans-serif;
 			}
@@ -27,6 +38,9 @@
 				margin: 0 auto;
 				width: 400px;
 				padding-top: 50px;
+				min-height:100%;
+				box-sizing: border-box;
+				padding-bottom: 200px;
 			}
 
 			#inputcontainer {
@@ -175,7 +189,13 @@ background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, F
 				margin: 0;
 			}
 
-			#title span {
+			#title .green {
+				color: #5b9b78;
+			}
+
+			#title .beta {
+				font-size: 7pt;
+				font-weight: 300;
 				color: #5b9b78;
 			}
 
@@ -217,6 +237,13 @@ background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, F
 				cursor: pointer;
 			}
 
+			.domainresult.available {
+				color: #5b9b78;
+			}
+			.domainresult.unavailable {
+				color: #9b5b78;
+			}
+
 			#textwidthchecker {
 				position: absolute;
 			    visibility: hidden;
@@ -226,11 +253,26 @@ background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, F
 
 				font-size: 10pt;
 			}
+
+			#footer {
+				position:absolute;
+    			bottom:0;
+				background: #eaefea;
+				width: 100%;
+				height: 300px;
+			}
+
+			#credit {
+				font-size: 10pt;
+			}
+			#credit span {
+				color: #f85908;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="container">
-			<h1 id="title">Domain<span>Hydra</span></h1>
+			<h1 id="title">Domain<span class="green">Hydra</span><span class="beta">Beta</span></h1>
 			<span id="description">The epic domain name generator</span>
 
 			<span class="tiptext">Type 1+ tags describing your idea</span>
@@ -248,11 +290,12 @@ background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, F
 					<span class="tld">net</span>
 				</div>-->
 			</div>
-
-			<footer>
-				<!--<span id="credit">Made with <3 by <b>Azlen Elza</b></span>-->
-			</footer>
 		</div>
+		<div></div>
+		<footer id="footer">
+			<div style="height:270px;"></div>
+			<div id="credit" style="text-align:center;">Made with <span>♥</span> in Vancouver, BC</div>
+		</footer>
 
 		<div id="textwidthchecker"></div>
 
@@ -266,7 +309,7 @@ background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, F
 			ga('send', 'pageview');
 		</script>
 
-
+		<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 		<script src="main.js"></script>
 		<script src="generators.js"></script>
 	</body>
