@@ -1,5 +1,5 @@
 // note, io(<port>) will create a http server for you
-var io = require('socket.io')(8888);
+var io = require('socket.io')(8880);
 var dns = require('dns');
 
 function random(a, b) {

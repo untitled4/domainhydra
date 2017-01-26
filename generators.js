@@ -6,7 +6,7 @@ function random(a, b) {
 	return Math.floor(Math.random() * (b - a + 1) + a);
 }
 
-var socket = io('http://159.203.5.68:8888'); // TIP: io() with no args does auto-discovery
+var socket = io('http://sockets.domainhydra.com:8880'); // TIP: io() with no args does auto-discovery
 socket.on('connect', function () { // TIP: you can avoid listening on `connect` and listen on events directly too!
 	socket.on('domains', function(domains) {
 		domainlist.innerHTML = '';
