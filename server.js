@@ -1,4 +1,4 @@
-// note, io(<port>) will create a http server for you
+var https = require('https'); // FIGURE OUT HOW TO USE HTTPS
 var io = require('socket.io')(8880);
 var dns = require('dns');
 
