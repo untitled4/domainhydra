@@ -1,12 +1,30 @@
 /*
 
 TODO:
-- there should be more padding on the bottoms of tags rather than being equal
-- gradient border??
-- logo
-- actually generate domains
-- check domain availability
-- generate button loading animation
+[ ] Apply for Verison TLD Zone data access
+[ ] Download Zone files to droplet
+[ ] Add landing page promotional section for SEO
+[ ] Write landing page SEO
+[ ] Put Generate button inside input
+[ ] Mobile
+	[ ] input width 100%
+	[ ] domaininfo as accordion with domain name list
+	[X] colour address bar
+	[ ] scrolling input
+	[ ]
+[ ] Work on generators
+[ ] make domains link to GoDaddy
+[ ] make domains link to GoDaddy affiliate links
+[ ] create buttons in domaininfo for different registrars (begin collecting registrar affiliates)
+[ ] Copyright section (+++ Made with <3)
+[ ] Privacy policy
+[ ] Facebook share button
+[ ] Twitter share button
+[ ] G+ share button
+[ ] LinkedIn share button
+[ ] Check available social media accounts related to domain name
+[ ] Work on backlinks (linking to site from other sites) and promotion
+
 */
 
 var tags_el = document.querySelector('#tags');
