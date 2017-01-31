@@ -5,7 +5,7 @@ var dns = require('dns');
 io.on('connection', function (socket) {
 	socket.on('tagData', function (tags) {
 		var domains = generateDomains(tags);
-		io.emit('domains', domains);
+		socket.emit('domains', domains);
 
 		/*for(var i = 0; i < domains.length; i++) {
 			dnsLookup(domains[i]);
@@ -26,7 +26,7 @@ io.on('connection', function (socket) {
 	});
 }*/
 
-/*function generateDomains(tags) {
+function generateDomains(tags) {
 	var domains = [];
 	for(var i = 0; i < 20; i++) {
 		domains.push(combinewords(tags) + '.com');
@@ -42,7 +42,7 @@ function combinewords(tags) {
 	var word1 = tagsmod.splice(random(0, tagsmod.length - 1), 1)[0];
 	var word2 = tagsmod.splice(random(0, tagsmod.length - 1), 1)[0];
 	return word1 + word2;
-}*/
+}
 
 function KeywordData(keywords) {
 	this.keywords = keywords || [];
