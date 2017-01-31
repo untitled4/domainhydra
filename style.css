@@ -1,0 +1,340 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	min-width: 100%;
+	/*min-height: 100%;*/
+
+	font-family: "Rubik", sans-serif;
+}
+
+body {
+	background-color: #fcfcfb;
+
+	color: #444;
+}
+
+#container {
+	margin: 0 auto;
+	width: 400px;
+	padding-top: 50px;
+	min-height:100%;
+	box-sizing: border-box;
+	/*padding-bottom: 200px;*/
+}
+
+#inputcontainer {
+	width: 400px;
+	/*border: 1px solid rgba(0,0,0,0.15);*/
+	display:block;
+	/*text-align: left;*/
+	padding: 7.5px 10px;
+	border-radius: 22.5px;
+	background-color: #fff;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.15)/*, 0px 0px 20px #6568DC*/;
+
+	cursor: text;
+
+	overflow: none;
+
+	background: #4568DC; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #4568DC , #B06AB3); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #4568DC , #B06AB3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+background: #43C6AC; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #43C6AC , #191654); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #43C6AC , #191654); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+background: #ee0979; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #ee0979 , #ff6a00); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #ee0979 , #ff6a00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+background: #000428; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #000428 , #004e92); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #000428 , #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+background: #4776E6; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #4776E6 , #8E54E9); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+background: #DD5E89; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #DD5E89 , #F7BB97); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #DD5E89 , #F7BB97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+background: #16A085; /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #16A085 , #F4D03F); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #16A085 , #F4D03F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+background: #73C8A9; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #73C8A9 , #373B44); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #73C8A9 , #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+background: #403A3E; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #403A3E , #BE5869); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #403A3E , #BE5869); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+background: #134E5E; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #134E5E , #71B280); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+background: #4776E6; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #4776E6 , #8E54E9); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.tag {
+	position: relative;
+	display: inline-block;
+	padding: 2.5px 10px;
+	margin: 5px 2.5px;
+	padding-right: 20px;
+	color: rgba(255,255,255,0.9);
+	font-size: 10pt;
+	border: 1px solid rgba(255,255,255,0.5);
+	/*border: 1px solid #000;*/
+	/*background-color: #fff;*/
+	font-weight: 100;
+	border-radius: 50px;
+}
+
+/*.tag:hover {
+	background-color: rgba(255,255,255,0.2);
+}*/
+
+.tag .remove {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	padding: 5px 5px;
+	right:2px;
+	cursor:pointer;
+}
+
+.tag .remove:hover {
+	opacity: 0.5;
+}
+
+#taginput {
+	font-family: "Rubik", sans-serif;
+	margin: 5px 2.5px;
+	padding: 2.5px 5px;
+	background: none;
+	border: none;
+	outline: none;
+	font-size: 10pt;
+	color: rgba(255,255,255,0.9);
+
+	font-weight: 300;
+}
+
+#generate {
+	display: block;
+	background: none;
+	outline: none;
+	border: 1px solid #444;
+	font-family: "Rubik", sans-serif;
+	font-size: 10pt;
+	border-radius:50px;
+	margin: 10px auto;
+	padding: 6px 20px;
+	color: #444;
+	cursor: pointer;
+
+	font-weight: 100;
+}
+
+#generate:hover {
+	background-color: #444;
+	color: #fff;
+}
+
+.tiptext {
+	display: inline-block;
+	font-size: 7.5pt;
+	font-weight: 500;
+	color: #777;
+	margin: 5px 0px;
+}
+
+#title {
+	font-size: 22px;
+	font-weight: black;
+	/*font-style: italic;*/
+	text-align: center;
+	margin: 0;
+}
+
+#title .green {
+	color: #8E54E9;
+}
+
+#title .beta {
+	font-size: 7pt;
+	font-weight: 300;
+	color: #8E54E9;
+	display: none;
+}
+
+#description {
+	font-size: 10pt;
+	font-weight: 300;
+	display: block;
+	text-align:center;
+	margin-bottom: 10px;
+	color: #777;
+}
+
+.domainresult {
+	margin-bottom: 5px;
+}
+
+.domainresult .domain {
+	vertical-align: center;
+	padding: 2px 10px;
+	font-size: 12pt;
+	font-weight: 300;
+	cursor: pointer;
+}
+.domainresult .domain:hover {
+	background-color: #eee;
+}
+.domainresult .domain.selected {
+	color: #fff;
+}
+#results.unavailable .domain.selected {
+	background: #f76892; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #f76892 , #8E54E9); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #f76892 , #8E54E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#results.available .domain.selected {
+	background: #02f774; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #02f774 , #8E54E9); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #02f774 , #8E54E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.domainresult .tld {
+	display: inline-block;
+	border-radius: 3px;
+	background-color: #5b9b78;
+	font-size: 9pt;
+	font-weight: 500;
+	color: #fff;
+	padding: 3px 6px;
+	margin: 0px 2.5px;
+	vertical-align: center;
+
+	cursor: pointer;
+}
+
+.domainresult.available {
+	color: #5b9b78;
+}
+.domainresult.unavailable {
+	color: #9b5b78;
+}
+
+#textwidthchecker {
+	position: absolute;
+	visibility: hidden;
+	height: auto;
+	width: auto;
+	white-space: nowrap;
+
+	font-size: 10pt;
+}
+
+#footer {
+	position:absolute;
+	bottom:0;
+	background: #eaefea;
+	width: 100%;
+	height: 300px;
+	visibility: hidden;
+}
+
+#credit {
+	font-size: 10pt;
+}
+#credit span {
+	color: #f85908;
+}
+
+
+#results {
+	margin: auto;
+	margin-top: 40px;
+	display: flex;
+	width: 500px;
+	border-radius: 10px;
+}
+
+#domainlist, #domaininfo {
+	flex: 1;
+	background:#fff;
+	border: 1px solid;
+	border-radius: 10px;
+}
+#results.available #domainlist, #results.available #domaininfo {
+	border-color: #02f774;
+}
+#results.unavailable #domainlist, #results.unavailable #domaininfo {
+	border-color: #f76892;
+}
+
+#domainlist {
+	/*margin-right: 20px;*/
+	border-right: none;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	min-height: 100px;
+	padding: 10px 0;
+}
+
+#domaininfo {
+	/*border-left-color: #f76892;*/
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#domaininfo > div {
+	padding: 10px;
+}
+
+#domaininfo .domainheader {
+	font-size: 20px;
+	margin: 0px;
+	/*font-weight: 100;*/
+}
+.availability {
+	display: inline-block;
+	font-size: 8pt;
+}
+.domainheader {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	line-height: 0.8;
+	padding-top: 4pt;
+}
+/*#results.available #domaininfo h1, */#results.available #domaininfo .availability {
+	color: #02f774;
+}
+/*#results.unavailable #domaininfo h1, */#results.unavailable #domaininfo .availability {
+	color: #f76892;
+}
+
+#results.available #domaininfo .availability .not {
+	display:none;
+}
+#results.unavailable #domaininfo .availability .not {
+	display:inline;
+}

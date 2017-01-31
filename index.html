@@ -25,258 +25,15 @@
 		<meta name="robots" content="index,follow">
 		<meta name="description" content="Generate epic domain name ideas for your next website. Find your perfect domain name in minutes.">
 
-		<style>
-			html, body {
-				margin: 0;
-				padding: 0;
-				min-width: 100%;
-				/*min-height: 100%;*/
-
-				font-family: "Rubik", sans-serif;
-			}
-
-			body {
-				background-color: #fefefd;
-
-				color: #444;
-			}
-
-			#container {
-				margin: 0 auto;
-				width: 400px;
-				padding-top: 50px;
-				min-height:100%;
-				box-sizing: border-box;
-				padding-bottom: 200px;
-			}
-
-			#inputcontainer {
-				width: 400px;
-				/*border: 1px solid rgba(0,0,0,0.15);*/
-				display:block;
-				/*text-align: left;*/
-				padding: 7.5px 10px;
-				border-radius: 22.5px;
-				background-color: #fff;
-				box-shadow: 0px 2px 5px rgba(0,0,0,0.15)/*, 0px 0px 20px #6568DC*/;
-
-				cursor: text;
-
-				overflow: none;
-
-				background: #4568DC; /* fallback for old browsers */
-				background: -webkit-linear-gradient(to left, #4568DC , #B06AB3); /* Chrome 10-25, Safari 5.1-6 */
-				background: linear-gradient(to left, #4568DC , #B06AB3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
-background: #43C6AC; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #43C6AC , #191654); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #43C6AC , #191654); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-background: #ee0979; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #ee0979 , #ff6a00); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #ee0979 , #ff6a00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-background: #000428; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #000428 , #004e92); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #000428 , #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
-background: #4776E6; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #4776E6 , #8E54E9); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-background: #DD5E89; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #DD5E89 , #F7BB97); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #DD5E89 , #F7BB97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-background: #16A085; /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #16A085 , #F4D03F); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #16A085 , #F4D03F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-background: #73C8A9; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #73C8A9 , #373B44); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #73C8A9 , #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-background: #403A3E; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #403A3E , #BE5869); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #403A3E , #BE5869); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-background: #134E5E; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #134E5E , #71B280); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-			}
-
-			.tag {
-				position: relative;
-				display: inline-block;
-				padding: 2.5px 10px;
-				margin: 5px 2.5px;
-				padding-right: 20px;
-				color: rgba(255,255,255,0.9);
-				font-size: 10pt;
-				border: 1px solid rgba(255,255,255,0.5);
-				/*border: 1px solid #000;*/
-				/*background-color: #fff;*/
-				font-weight: 100;
-				border-radius: 50px;
-			}
-
-			/*.tag:hover {
-				background-color: rgba(255,255,255,0.2);
-			}*/
-
-			.tag .remove {
-				position: absolute;
-				width: 8px;
-				height: 8px;
-				padding: 5px 5px;
-				right:2px;
-				cursor:pointer;
-			}
-
-			.tag .remove:hover {
-				opacity: 0.5;
-			}
-
-			#taginput {
-				font-family: "Rubik", sans-serif;
-				margin: 5px 2.5px;
-				padding: 2.5px 5px;
-				background: none;
-				border: none;
-				outline: none;
-				font-size: 10pt;
-				color: rgba(255,255,255,0.9);
-
-				font-weight: 300;
-			}
-
-			#generate {
-				display: block;
-				background: none;
-				outline: none;
-				border: 1px solid #444;
-				font-family: "Rubik", sans-serif;
-				font-size: 10pt;
-				border-radius:50px;
-				margin: 10px auto;
-				padding: 6px 20px;
-				color: #444;
-				cursor: pointer;
-
-				font-weight: 100;
-			}
-
-			#generate:hover {
-				background-color: #444;
-				color: #fff;
-			}
-
-			.tiptext {
-				display: inline-block;
-				font-size: 7.5pt;
-				font-weight: 500;
-				color: #777;
-				margin: 5px 0px;
-			}
-
-			#title {
-				font-size: 22px;
-				font-weight: black;
-				/*font-style: italic;*/
-				text-align: center;
-				margin: 0;
-			}
-
-			#title .green {
-				color: #5b9b78;
-			}
-
-			#title .beta {
-				font-size: 7pt;
-				font-weight: 300;
-				color: #5b9b78;
-			}
-
-			#description {
-				font-size: 10pt;
-				font-weight: 300;
-				display: block;
-				text-align:center;
-				margin-bottom: 10px;
-				color: #777;
-			}
-
-			#domainlist {
-				margin-auto;
-				text-align: center;
-				margin-top: 40px;
-			}
-
-			.domainresult {
-				margin-bottom: 5px;
-			}
-
-			.domainresult .domain {
-				vertical-align: center;
-				margin-right: 2.5px;
-			}
-
-			.domainresult .tld {
-				display: inline-block;
-				border-radius: 3px;
-				background-color: #5b9b78;
-				font-size: 9pt;
-				font-weight: 500;
-				color: #fff;
-				padding: 3px 6px;
-				margin: 0px 2.5px;
-				vertical-align: center;
-
-				cursor: pointer;
-			}
-
-			.domainresult.available {
-				color: #5b9b78;
-			}
-			.domainresult.unavailable {
-				color: #9b5b78;
-			}
-
-			#textwidthchecker {
-				position: absolute;
-			    visibility: hidden;
-			    height: auto;
-			    width: auto;
-			    white-space: nowrap;
-
-				font-size: 10pt;
-			}
-
-			#footer {
-				position:absolute;
-    			bottom:0;
-				background: #eaefea;
-				width: 100%;
-				height: 300px;
-				visibility: hidden;
-			}
-
-			#credit {
-				font-size: 10pt;
-			}
-			#credit span {
-				color: #f85908;
-			}
-		</style>
+		<!-- Android -->
+		<meta name="theme-color" content="#8E54E9" />
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#8E54E9">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<div id="container">
@@ -290,16 +47,33 @@ background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, F
 				<input id="taginput" type="text" autocapitalize=words/>
 			</div>
 			<button id="generate">Generate</button>
-
+		</div>
+		<div id="results" class="unavailable">
 			<div id="domainlist">
-				<!--<div class="domainresult">
-					<span class="domain">onetwothree.</span>
-					<span class="tld">com</span>
-					<span class="tld">net</span>
-				</div>-->
+				<div class="domainresult">
+					<div class="domain selected">domainhydra.com</div>
+					<div class="domain">loremipsum.tk</div>
+					<div class="domain">dolorsamet.org</div>
+					<div class="domain">colorpicker.io</div>
+					<div class="domain">ipsumdolor.net</div>
+					<div class="domain">sam.et</div>
+					<div class="domain">dol.or</div>
+					<div class="domain">evildomainna.me</div>
+					<div class="domain">seo-optimiz.edu</div>
+					<div class="domain">convolutedspirit.se</div>
+					<div class="domain">endangeredspecies.org</div>
+					<!--<span class="tld">net</span>
+					<span class="tld">io</span>-->
+				</div>
+			</div>
+			<div id="domaininfo">
+				<div>
+					<h2 class="domainheader">domainhydra.com</h2>
+					<span class="availability"><span class="not">NOT </span>AVAILABLE</span>
+
+				</div>
 			</div>
 		</div>
-		<div></div>
 		<footer id="footer">
 			<div style="height:270px;"></div>
 			<div id="credit" style="text-align:center;">Made with <span>♥</span> in Vancouver, BC</div>
