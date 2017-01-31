@@ -49,15 +49,15 @@ function KeywordData(keywords) {
 	this.keywords = keywords || [];
 }
 
-KeywordData.prototype.setKeywords(keywords) {
+KeywordData.prototype.setKeywords = function(keywords) {
 
 }
 
-KeywordData.prototype.addKeyword(keyword) {
+KeywordData.prototype.addKeyword = function(keyword) {
 
 }
 
-KeywordData.prototype.removeKeyword(keyword) {
+KeywordData.prototype.removeKeyword = function(keyword) {
 
 }
 
