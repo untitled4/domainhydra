@@ -1,6 +1,6 @@
-//var https = require('https'); // FIGURE OUT HOW TO USE HTTPS
+var https = require('http');
 var io = require('socket.io')(8880);
-var dns = require('dns');
+//var dns = require('dns');
 
 io.on('connection', function (socket) {
 	socket.on('tagData', function (tags) {
@@ -37,6 +37,7 @@ function generateDomains(tags) {
 function random(a, b) {
 	return Math.floor(Math.random() * (b - a + 1) + a);
 }
+
 function combinewords(tags) {
 	var tagsmod = tags.slice();
 	var word1 = tagsmod.splice(random(0, tagsmod.length - 1), 1)[0];
