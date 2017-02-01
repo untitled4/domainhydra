@@ -1,7 +1,8 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	min-width: 100%;
+	width: 100%;
+	min-height: 100%;
 	/*min-height: 100%;*/
 
 	font-family: "Rubik", sans-serif;
@@ -9,6 +10,8 @@ html, body {
 
 body {
 	background-color: #fcfcfb;
+	position: relative;
+	padding-bottom: 50px;
 
 	color: #444;
 }
@@ -193,29 +196,26 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 	color: #777;
 }
 
-.domainresult {
-	margin-bottom: 5px;
-}
-
-.domainresult .domain {
+.domainresult  {
+	margin: none;
 	vertical-align: center;
 	padding: 2px 10px;
 	font-size: 12pt;
 	font-weight: 300;
 	cursor: pointer;
 }
-.domainresult .domain:hover {
+.domainresult:hover{
 	background-color: #eee;
 }
-.domainresult .domain.selected {
+.domainresult.selected {
 	color: #fff;
 }
-#results.unavailable .domain.selected {
+#results.unavailable .domainresult.selected {
 	background: #f76892; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, #f76892 , #8E54E9); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to left, #f76892 , #8E54E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-#results.available .domain.selected {
+#results.available .domainresult.selected {
 	background: #02f774; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, #02f774 , #8E54E9); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to left, #02f774 , #8E54E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -253,21 +253,13 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 }
 
 #footer {
-	position:absolute;
-	bottom:0;
-	background: #eaefea;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
 	width: 100%;
-	height: 300px;
-	visibility: hidden;
-}
-
-#credit {
 	font-size: 10pt;
+	/*visibility: hidden;*/
 }
-#credit span {
-	color: #f85908;
-}
-
 
 #results {
 	margin: auto;
@@ -292,7 +284,6 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 
 #domainlist {
 	/*margin-right: 20px;*/
-	border-right: none;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	min-height: 100px;
@@ -301,6 +292,7 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 
 #domaininfo {
 	/*border-left-color: #f76892;*/
+	border-left: none;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 }

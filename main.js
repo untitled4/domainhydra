@@ -1,21 +1,20 @@
 /*
-
-TODO:
-[ ] Apply for Verison TLD Zone data access
+TODO
+*[ ] Apply for Verison TLD Zone data access
 [ ] Download Zone files to droplet
 [ ] Add landing page promotional section for SEO
 [ ] Write landing page SEO
 [ ] Put Generate button inside input
 [ ] Mobile
-	[ ] input width 100%
-	[ ] domaininfo as accordion with domain name list
+	*[ ] input width 100%
+	*[ ] domaininfo as accordion with domain name list
 	[X] colour address bar
 	[ ] scrolling input
 	[ ]
-[ ] Work on generators
-[ ] make domains link to GoDaddy
+*[ ] Work on generators
+*[ ] make domains link to GoDaddy
 [ ] make domains link to GoDaddy affiliate links
-[ ] create buttons in domaininfo for different registrars (begin collecting registrar affiliates)
+*[ ] create buttons in domaininfo for different registrars (begin collecting registrar affiliates)
 [ ] Copyright section (+++ Made with <3)
 [ ] Privacy policy
 [ ] Facebook share button
@@ -24,8 +23,9 @@ TODO:
 [ ] LinkedIn share button
 [ ] Check available social media accounts related to domain name
 [ ] Work on backlinks (linking to site from other sites) and promotion
-
 */
+
+document.querySelector('.year').textContent = new Date().getFullYear();
 
 var tags_el = document.querySelector('#tags');
 var tags = [];

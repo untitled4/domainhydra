@@ -12,6 +12,11 @@ socket.on('connect', function () { // TIP: you can avoid listening on `connect` 
 		domainlist.innerHTML = '';
 		for(var i = 0; i < domains.length; i++) {
 			var domainResult = createDomainResult(domains[i]);
+			if(i === 0)  {
+				domainResult.classList.add('selected');
+				document.querySelector('#results').classList.remove('available', 'unavailable');
+				document.querySelector('#results').classList.add(['available', 'unavailable'][random(0,1)]);
+			}
 			domainobject[domains[i]] = domainResult;
 			domainlist.appendChild(domainResult);
 		}
@@ -28,10 +33,10 @@ function createDomainResult(domain, tlds) {
 	var el = document.createElement('div');
 	el.classList.add('domainresult');
 
-	var domain_span = document.createElement('span');
-	domain_span.classList.add('domain');
-	domain_span.textContent = domain /*+ '.'*/;
-	el.appendChild(domain_span);
+	var domainDiv = document.createElement('div');
+	domainDiv.classList.add('domain');
+	domainDiv.textContent = domain /*+ '.'*/;
+	el.appendChild(domainDiv);
 
 	/*for(var i = 0; i < tlds.length; i++) {
 		var tld_span = document.createElement('span');
