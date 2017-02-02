@@ -8,10 +8,14 @@ html, body {
 	font-family: "Rubik", sans-serif;
 }
 
+*{
+	transition: all .25s; /* SHOULD FIX: there should only be transitions on things that need transitions!!! */
+}
+
 body {
 	background-color: #fcfcfb;
 	position: relative;
-	padding-bottom: 50px;
+	padding-bottom: 70px;
 
 	color: #444;
 }
@@ -203,6 +207,9 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 	font-size: 12pt;
 	font-weight: 300;
 	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	color: inherit;
 }
 .domainresult:hover{
 	background-color: #eee;
@@ -211,14 +218,14 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 	color: #fff;
 }
 #results.unavailable .domainresult.selected {
-	background: #f76892; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #f76892 , #8E54E9); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #f76892 , #8E54E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #f76892;
+	background: -webkit-linear-gradient(to left, #f76892 , #8E54E9);
+	background: linear-gradient(to left, #f76892 , #8E54E9);
 }
 #results.available .domainresult.selected {
-	background: #02f774; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #02f774 , #8E54E9); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #02f774 , #8E54E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #02f774;
+	background: -webkit-linear-gradient(to left, #02f774 , #8E54E9);
+	background: linear-gradient(to left, #02f774 , #8E54E9);
 }
 
 .domainresult .tld {
@@ -254,7 +261,7 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 
 #footer {
 	position: absolute;
-	bottom: 0;
+	bottom: 20px;
 	text-align: center;
 	width: 100%;
 	font-size: 10pt;
@@ -284,8 +291,8 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 
 #domainlist {
 	/*margin-right: 20px;*/
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
+	/*border-top-right-radius: 0;
+	border-bottom-right-radius: 0;*/
 	min-height: 100px;
 	padding: 10px 0;
 }
@@ -295,6 +302,7 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 	border-left: none;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
+	display: none;
 }
 
 #domaininfo > div {

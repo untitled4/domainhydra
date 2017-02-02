@@ -1,28 +1,31 @@
 /*
 TODO
 *[ ] Apply for Verison TLD Zone data access
-[ ] Download Zone files to droplet
-[ ] Add landing page promotional section for SEO
-[ ] Write landing page SEO
-[ ] Put Generate button inside input
-[ ] Mobile
-	*[ ] input width 100%
+ [ ] Download Zone files to droplet
+ [ ] Add landing page promotional section for SEO
+ [ ] Write landing page SEO
+ [ ] Put Generate button inside input
+ [X] Mobile
+	*[X] input width 100%
 	*[ ] domaininfo as accordion with domain name list
-	[X] colour address bar
-	[ ] scrolling input
-	[ ]
+	 [X] colour address bar
+	 [ ] scrolling input
+	 [ ]
 *[ ] Work on generators
-*[ ] make domains link to GoDaddy
-[ ] make domains link to GoDaddy affiliate links
+ [X] make domains link to GoDaddy
+*[ ] make domains link to GoDaddy affiliate links
 *[ ] create buttons in domaininfo for different registrars (begin collecting registrar affiliates)
-[ ] Copyright section (+++ Made with <3)
-[ ] Privacy policy
-[ ] Facebook share button
-[ ] Twitter share button
-[ ] G+ share button
-[ ] LinkedIn share button
-[ ] Check available social media accounts related to domain name
-[ ] Work on backlinks (linking to site from other sites) and promotion
+ [X] Copyright section
+ [ ] Privacy policy
+ [ ] Facebook share button
+ [ ] Twitter share button
+ [ ] G+ share button
+ [ ] LinkedIn share button
+ [ ] Check available social media accounts related to domain name
+ [ ] Work on backlinks (linking to site from other sites) and promotion
+ [ ] Create link and image for links in slack/twitter/facebook etc.
+ [ ] Set up DomainHydra email address
+ 	? contact@domainhydra.com
 */
 
 document.querySelector('.year').textContent = new Date().getFullYear();

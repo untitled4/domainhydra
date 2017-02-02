@@ -13,9 +13,9 @@ socket.on('connect', function () { // TIP: you can avoid listening on `connect` 
 		for(var i = 0; i < domains.length; i++) {
 			var domainResult = createDomainResult(domains[i]);
 			if(i === 0)  {
-				domainResult.classList.add('selected');
+				/*domainResult.classList.add('selected');
 				document.querySelector('#results').classList.remove('available', 'unavailable');
-				document.querySelector('#results').classList.add(['available', 'unavailable'][random(0,1)]);
+				document.querySelector('#results').classList.add(['available', 'unavailable'][random(0,1)]);*/
 			}
 			domainobject[domains[i]] = domainResult;
 			domainlist.appendChild(domainResult);
@@ -30,8 +30,11 @@ socket.on('connect', function () { // TIP: you can avoid listening on `connect` 
 function createDomainResult(domain, tlds) {
 	//tlds = tlds || ['com','org','net'];
 
-	var el = document.createElement('div');
+	var el = document.createElement('a');
 	el.classList.add('domainresult');
+
+	el.href = "https://ca.godaddy.com/domains/searchresults.aspx?domainToCheck=" + domain;
+	el.target = "_blank";
 
 	var domainDiv = document.createElement('div');
 	domainDiv.classList.add('domain');
