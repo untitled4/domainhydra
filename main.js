@@ -29,7 +29,8 @@ TODO
 	? feedback@domainhydra.com
 	? help@domainhydra.com
  [ ] Allow commas to separate tags
- [ ] Make inputing tags work on mobile
+ [?] Make inputing tags work on mobile
+ [ ] Possibly switch to `onbeforeinput` instead of `oninput`
 */
 
 document.querySelector('.year').textContent = new Date().getFullYear();
@@ -84,33 +85,45 @@ function capitalize(str) {
 	return str[0].toUpperCase() + str.slice(1);
 }
 
-taginput_el.addEventListener('input', function(e) {
-	var value = stripSpaces(this.value);
-	if(e.keyCode == 13 || e.keyCode == 32) { // Enter || Space
-		if(value != '') {
-			createTag(value);
-			this.value = '';
-		}else if(e.keyCode == 13) {
-			generate();
-		}
-		setTimeout(function() {
-			taginput_el.value = '';
-		}, 0)
+function enterTag(value) {
+	if(value != '') {
+		createTag(value);
+		this.value = '';
+	}
+	setTimeout(function() {
+		taginput_el.value = '';
+	}, 0);
+}
 
+taginput_el.addEventListener('keydown', function(e) {
+	var value = stripSpaces(this.value);
+	if(e.keyCode == 13/* || e.keyCode == 32*/) { // Enter || Space
+		enterTag.bind(this)(value);
+		generate();
 	}
 	if(e.keyCode == 8) {
 		if(value == '') {
 			deleteTag(tags_el.children[tags_el.children.length - 1])
 		}
 	}
-	//setTimeout(function() {
-		taginput_el.value = capitalize(taginput_el.value);
+})
 
-		var textwidthchecker = document.querySelector('#textwidthchecker');
-		textwidthchecker.textContent = taginput_el.value;
+taginput_el.addEventListener('input', function(e) {
+	var value = this.value;
+	value = value.split(/[ ,]+/g);
 
-		taginput_el.style.width = (textwidthchecker.clientWidth + 20) + 'px';
-	//}, 0);
+	if(value.length > 1) {
+		for(var i = 0; i < value.length; i++) {
+			enterTag.bind(this)(value[i]);
+		}
+	}
+
+	taginput_el.value = capitalize(taginput_el.value);
+
+	var textwidthchecker = document.querySelector('#textwidthchecker');
+	textwidthchecker.textContent = taginput_el.value;
+
+	taginput_el.style.width = (textwidthchecker.clientWidth + 20) + 'px';
 });
 
 taginput_el.addEventListener('blur', function(e) {

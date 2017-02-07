@@ -180,6 +180,11 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 	margin: 0;
 }
 
+#title a {
+	text-decoration: none;
+	color: inherit;
+}
+
 #title .green {
 	color: #8E54E9;
 }
