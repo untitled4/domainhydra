@@ -13,7 +13,7 @@ TODO
 	 [ ]
 *[ ] Work on generators
  [X] make domains link to GoDaddy
-*[ ] make domains link to GoDaddy affiliate links
+*[...] make domains link to GoDaddy affiliate links
 *[ ] create buttons in domaininfo for different registrars (begin collecting registrar affiliates)
  [X] Copyright section
  [ ] Privacy policy
@@ -28,17 +28,17 @@ TODO
  	? contact@domainhydra.com
 	? feedback@domainhydra.com
 	? help@domainhydra.com
- [ ] Allow commas to separate tags
- [?] Make inputing tags work on mobile
- [ ] Possibly switch to `onbeforeinput` instead of `oninput`
+ [X] Allow commas to separate tags
+ [X] Make inputing tags work on mobile
+ [?] Possibly switch to `onbeforeinput` instead of `oninput`
+ [X] Make background color of #domaininfo change
+ [ ] Make domain name in #domaininfo change
+ [ ] Add GoDaddy button in #domaininfo
+ [ ] Add BlueHost button in #domaininfo (only for certain domains :P)
+ [ ] Make text bigger on mobile
 */
 
 document.querySelector('.year').textContent = new Date().getFullYear();
-
-var tags_el = document.querySelector('#tags');
-var tags = [];
-var taginput_el = document.querySelector('#taginput');
-var inputcontainer_el = document.querySelector('#inputcontainer');
 
 function getTextWidth(text, font) {
     // re-use canvas object for better performance

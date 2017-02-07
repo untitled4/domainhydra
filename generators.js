@@ -1,7 +1,3 @@
-var domainlist = document.querySelector('#domainlist');
-var domainobject = {};
-var generatebutton = document.querySelector('#generate');
-
 function random(a, b) {
 	return Math.floor(Math.random() * (b - a + 1) + a);
 }
@@ -60,6 +56,8 @@ function createDomainResult(domain, tlds) {
 
 function generate() {
 	socket.emit('tagData', tags);
+
+	taginput_el.blur();
 	/*domainlist.innerHTML = '';
 	for(var i = 0; i < 2; i++) {
 		domainlist.appendChild(createDomainResult(combinewords()))
