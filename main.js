@@ -26,6 +26,10 @@ TODO
  [ ] Create link and image for links in slack/twitter/facebook etc.
  [ ] Set up DomainHydra email address
  	? contact@domainhydra.com
+	? feedback@domainhydra.com
+	? help@domainhydra.com
+ [ ] Allow commas to separate tags
+ [ ] Make inputing tags work on mobile
 */
 
 document.querySelector('.year').textContent = new Date().getFullYear();
@@ -80,7 +84,7 @@ function capitalize(str) {
 	return str[0].toUpperCase() + str.slice(1);
 }
 
-taginput_el.addEventListener('keydown', function(e) {
+taginput_el.addEventListener('input', function(e) {
 	var value = stripSpaces(this.value);
 	if(e.keyCode == 13 || e.keyCode == 32) { // Enter || Space
 		if(value != '') {
@@ -99,14 +103,14 @@ taginput_el.addEventListener('keydown', function(e) {
 			deleteTag(tags_el.children[tags_el.children.length - 1])
 		}
 	}
-	setTimeout(function() {
+	//setTimeout(function() {
 		taginput_el.value = capitalize(taginput_el.value);
 
 		var textwidthchecker = document.querySelector('#textwidthchecker');
 		textwidthchecker.textContent = taginput_el.value;
 
 		taginput_el.style.width = (textwidthchecker.clientWidth + 20) + 'px';
-	}, 0);
+	//}, 0);
 });
 
 taginput_el.addEventListener('blur', function(e) {

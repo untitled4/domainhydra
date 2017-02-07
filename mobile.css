@@ -21,5 +21,9 @@
 	border-bottom-right-radius: 10px;
 }
 #domaininfo {
-	display: none;
+	/*display: none;*/
+	width: 0;
+	flex: 0;
+	border: none;
+	opacity: 0;
 }
