@@ -8,8 +8,8 @@ html, body {
 	font-family: "Rubik", sans-serif;
 }
 
-#container, #inputcontainer, #results, #domainlist, #domaininfo{
-	transition: all .25s; /* SHOULD FIX: there should only be transitions on things that need transitions!!! */
+#container, #inputcontainer, #results, #domainlist, #domaininfo, .mobiledomaininfo {
+	transition: all .25s;
 }
 
 body {
@@ -119,10 +119,12 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 
 .tag .remove {
 	position: absolute;
-	width: 8px;
-	height: 8px;
-	padding: 5px 5px;
-	right:2px;
+	/*width: 8px;
+	height: 8px;*/
+	font-size: 6pt;
+	padding: 7px 7px;
+	right: 1px;
+	top: -0.5px;
 	cursor:pointer;
 }
 
@@ -208,7 +210,7 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 .domainresult  {
 	margin: none;
 	vertical-align: center;
-	padding: 2px 10px;
+	padding: 3px 10px;
 	font-size: 12pt;
 	font-weight: 300;
 	cursor: pointer;
@@ -231,6 +233,20 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 	background: #4776E6;
 	background: -webkit-linear-gradient(to left, #4776E6 , #8E54E9);
 	background: linear-gradient(to left, #4776E6 , #8E54E9);
+}
+.domainresult .accordion-angle {
+	display: inline-block;
+	float: right;
+	margin-right: 2pt;
+	opacity: 0;
+	visibility: hidden;
+}
+.domainresult.selected .accordion-angle {
+	margin-right: 0;
+	opacity: 1;
+}
+.domainresult.selected .accordion-angle::before {
+	content: "\f107" !important; /* fa-angle-down */
 }
 
 .domainresult .tld {
@@ -317,17 +333,15 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 	padding: 10px;
 }
 
-#domaininfo .domainheader {
-	font-size: 20px;
-	margin: 0px;
-	/*font-weight: 100;*/
-}
 .availability {
 	display: inline-block;
 	font-size: 8pt;
 	color: #fff;
 }
 .domainheader {
+	font-size: 20px;
+	margin: 0px;
+	/*font-weight: 100;*/
 	margin: 0px;
 	padding: 0px;
 	display: block;
@@ -336,9 +350,15 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 }
 
 
-#results.available #domaininfo .availability .not {
+#results.available .availability .not {
 	display:none;
 }
-#results.unavailable #domaininfo .availability .not {
+#results.unavailable .availability .not {
 	display:inline;
+}
+
+.mobiledomaininfo {
+	display: none;
+	height: 0;
+	overflow: hidden;
 }

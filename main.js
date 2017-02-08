@@ -4,13 +4,15 @@ TODO
  [ ] Download Zone files to droplet
  [ ] Add landing page promotional section for SEO
  [ ] Write landing page SEO
- [ ] Put Generate button inside input
+ [ ] Put Generate button inside input container
  [X] Mobile
 	*[X] input width 100%
 	*[ ] domaininfo as accordion with domain name list
 	 [X] colour address bar
 	 [ ] scrolling input
-	 [ ]
+	 [X] Make text bigger
+	 [X] Put angle icons in .domainresult
+	 [ ] Make input fixed when scroll too far, but not title
 *[ ] Work on generators
  [X] make domains link to GoDaddy
 *[...] make domains link to GoDaddy affiliate links
@@ -35,7 +37,8 @@ TODO
  [ ] Make domain name in #domaininfo change
  [ ] Add GoDaddy button in #domaininfo
  [ ] Add BlueHost button in #domaininfo (only for certain domains :P)
- [ ] Make text bigger on mobile
+ [X] Use fontawesome for now, can reduce loadtime later
+ [X] Implement fontawesome
 */
 
 document.querySelector('.year').textContent = new Date().getFullYear();
@@ -56,19 +59,25 @@ function createTag(text) {
 	el.classList.add('tag');
 	el.textContent = text;
 
-	var svg = document.createElement('img');
-	svg.classList.add('remove');
+	//var svg = document.createElement('img');
+	//svg.classList.add('remove');
 
-	el.appendChild(svg);
+	//el.appendChild(svg);
+
+	var icon = document.createElement('i');
+	icon.classList.add('fa', 'fa-close', 'remove');
+
+	el.appendChild(icon);
+
+	icon.addEventListener('click', function(e) {
+		deleteTag(el);
+	})
 
 	tags_el.appendChild(el);
 
-	svg.src = 'svg/close.svg';
+	//svg.src = 'svg/close.svg';
 
 	tags.push(text);
-	svg.addEventListener('click', function(e) {
-		deleteTag(el);
-	})
 }
 
 function deleteTag(el) {

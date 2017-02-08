@@ -8,7 +8,6 @@
 #inputcontainer {
 	width: 100%;
 	box-sizing: border-box;
-	overflow-x: scroll;
 }
 
 #results {
@@ -26,4 +25,38 @@
 	flex: 0;
 	border: none;
 	opacity: 0;
+}
+
+.domainresult {
+	font-size: 14pt;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.domainresult .accordion-angle {
+	margin-top: 2px;
+	visibility: visible;
+}
+
+#results.unavailable .domainresult.selected {
+	background: #f76892;
+	background: -webkit-linear-gradient(to top, #f76892 40% , #8E54E9);
+	background: linear-gradient(to top, #f76892 40% , #8E54E9);
+}
+#results.available .domainresult.selected {
+	background: #4776E6;
+	background: -webkit-linear-gradient(to top, #4776E6 , #8E54E9);
+	background: linear-gradient(to top, #4776E6 , #8E54E9);
+}
+
+.domainresult .mobiledomaininfo {
+	display: block;
+	/*height: 0px;*/
+	height: 0px;
+	transition: all .5s;
+}
+
+.domainresult.selected .mobiledomaininfo {
+	height: 50px;
+	transition: all .25s;
 }

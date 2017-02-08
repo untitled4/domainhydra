@@ -39,10 +39,28 @@ function createDomainResult(domain, tlds) {
 		document.querySelector('#results').classList.add(['available', 'unavailable'][random(0,1)]);
 	})
 
-	var domainDiv = document.createElement('div');
+	var domainDiv = document.createElement('span');
 	domainDiv.classList.add('domain');
 	domainDiv.textContent = domain /*+ '.'*/;
 	el.appendChild(domainDiv);
+
+	var icon = document.createElement('i');
+	icon.classList.add('fa', 'fa-angle-left', 'accordion-angle');
+	el.appendChild(icon);
+
+	var mobileDomainInfo = document.createElement('div');
+	mobileDomainInfo.classList.add('mobiledomaininfo');
+	el.appendChild(mobileDomainInfo);
+
+	/*var domainHeader = document.createElement('h2');
+	domainHeader.classList.add('domainheader');
+	domainHeader.textContent = domain;
+	mobileDomainInfo.appendChild(domainHeader);*/
+
+	var availability = document.createElement('span');
+	availability.classList.add('availability');
+	availability.innerHTML = '<span class="not">NOT </span>AVAILABLE';
+	mobileDomainInfo.appendChild(availability);
 
 	/*for(var i = 0; i < tlds.length; i++) {
 		var tld_span = document.createElement('span');
