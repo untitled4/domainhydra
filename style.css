@@ -6,6 +6,8 @@ html, body {
 	/*min-height: 100%;*/
 
 	font-family: "Rubik", sans-serif;
+
+	overflow-x: hidden;
 }
 
 #container, #inputcontainer, #results, #domainlist, #domaininfo, .mobiledomaininfo {
@@ -21,6 +23,7 @@ body {
 }
 
 #container {
+	position: relative;
 	margin: 0 auto;
 	width: 400px;
 	padding-top: 50px;

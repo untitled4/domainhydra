@@ -1,5 +1,7 @@
 /*
+
 TODO
+
 *[ ] Apply for Verison TLD Zone data access
  [ ] Download Zone files to droplet
  [ ] Add landing page promotional section for SEO
@@ -12,7 +14,8 @@ TODO
 	 [ ] scrolling input
 	 [X] Make text bigger
 	 [X] Put angle icons in .domainresult
-	 [ ] Make input fixed when scroll too far, but not title
+	*[X] Make input fixed when scroll too far, but not title
+	 [ ] fill space taken from input 
 *[ ] Work on generators
  [X] make domains link to GoDaddy
 *[...] make domains link to GoDaddy affiliate links
@@ -39,6 +42,7 @@ TODO
  [ ] Add BlueHost button in #domaininfo (only for certain domains :P)
  [X] Use fontawesome for now, can reduce loadtime later
  [X] Implement fontawesome
+
 */
 
 document.querySelector('.year').textContent = new Date().getFullYear();
@@ -145,4 +149,13 @@ taginput_el.addEventListener('blur', function(e) {
 
 inputcontainer_el.addEventListener('click', function(e) {
 	taginput_el.focus();
+})
+
+
+window.addEventListener('scroll', function() {
+	if(document.body.scrollTop > scrollHeightMarker) {
+		stickonscroll.classList.add('fixed');
+	} else {
+		stickonscroll.classList.remove('fixed');
+	}
 })

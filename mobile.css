@@ -40,13 +40,13 @@
 
 #results.unavailable .domainresult.selected {
 	background: #f76892;
-	background: -webkit-linear-gradient(to top, #f76892 40% , #8E54E9);
-	background: linear-gradient(to top, #f76892 40% , #8E54E9);
+	background: -webkit-linear-gradient(to left, #f76892 , #8E54E9);
+	background: linear-gradient(to left, #f76892 , #8E54E9);
 }
 #results.available .domainresult.selected {
 	background: #4776E6;
-	background: -webkit-linear-gradient(to top, #4776E6 , #8E54E9);
-	background: linear-gradient(to top, #4776E6 , #8E54E9);
+	background: -webkit-linear-gradient(to left, #4776E6 , #8E54E9);
+	background: linear-gradient(to left, #4776E6 , #8E54E9);
 }
 
 .domainresult .mobiledomaininfo {
@@ -59,4 +59,31 @@
 .domainresult.selected .mobiledomaininfo {
 	height: 50px;
 	transition: all .25s;
+}
+
+#stickonscroll {
+	background: rgba(255,255,255,0.5); /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #FFFFFF 60% , rgba(255,255,255,0)); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #FFFFFF 60%, rgba(255,255,255,0)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#stickonscroll.fixed {
+	padding-right: 40px;
+	padding-bottom: 40px;
+	box-sizing: border-box;
+	width: 100%;
+	position: fixed;
+	top: 0;
+
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;
+}
+
+#stickonscroll.fixed * {
+	-webkit-user-select: all;  /* Chrome all / Safari all */
+	-moz-user-select: all;     /* Firefox all */
+	-ms-user-select: all;      /* IE 10+ */
+	user-select: all;
 }
