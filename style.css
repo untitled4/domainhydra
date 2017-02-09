@@ -372,3 +372,23 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 #emptyspace {
 	display: none;
 }
+
+.registrarbuttonlist {
+	position: relative;
+	margin-top: 5px;
+	/*display: flex;*/
+	flex-wrap: wrap;
+}
+
+.registrarbutton {
+	border: 1px solid #fff;
+	background: none;
+	outline: none;
+	border-radius: 5px;
+	color: #fff;
+	margin-bottom: 5px;
+	padding: 5px 0px;
+	cursor: pointer;
+	flex: 1;
+	width: 100%;
+}

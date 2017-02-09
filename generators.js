@@ -23,6 +23,20 @@ socket.on('connect', function () { // TIP: you can avoid listening on `connect` 
 	})
 });
 
+function generateButtons() {
+	var fragment = document.createDocumentFragment();
+
+	var registrars = ['GoDaddy', 'NameCheap', 'BlueHost', 'Orange']
+	for(var i = 0; i < registrars.length; i++) {
+		var button = document.createElement('button');
+		button.classList.add('registrarbutton');
+		button.textContent = registrars[i];
+		fragment.appendChild(button);
+	}
+
+	return fragment;
+}
+
 function createDomainResult(domain, tlds) {
 	//tlds = tlds || ['com','org','net'];
 
@@ -31,15 +45,6 @@ function createDomainResult(domain, tlds) {
 
 	/*el.href = "https://ca.godaddy.com/domains/searchresults.aspx?domainToCheck=" + domain;
 	el.target = "_blank";*/
-
-	el.addEventListener('click', function(e) {
-		document.querySelector('.selected').classList.remove('selected');
-		this.classList.add('selected');
-		document.querySelector('#results').classList.remove('available', 'unavailable');
-		document.querySelector('#results').classList.add(['available', 'unavailable'][random(0,1)]);
-
-		document.querySelector('#domaininfo .domainheader').textContent = domain;
-	})
 
 	var domainDiv = document.createElement('span');
 	domainDiv.classList.add('domain');
@@ -54,15 +59,31 @@ function createDomainResult(domain, tlds) {
 	mobileDomainInfo.classList.add('mobiledomaininfo');
 	el.appendChild(mobileDomainInfo);
 
-	/*var domainHeader = document.createElement('h2');
-	domainHeader.classList.add('domainheader');
-	domainHeader.textContent = domain;
-	mobileDomainInfo.appendChild(domainHeader);*/
-
 	var availability = document.createElement('span');
 	availability.classList.add('availability');
 	availability.innerHTML = '<span class="not">NOT </span>AVAILABLE';
 	mobileDomainInfo.appendChild(availability);
+
+	var buttonlist = document.createElement('div');
+	buttonlist.classList.add('registrarbuttonlist');
+	buttonlist.appendChild(generateButtons());
+	mobileDomainInfo.appendChild(buttonlist);
+
+	el.addEventListener('click', function(e) {
+		document.querySelector('.selected').classList.remove('selected');
+		this.classList.add('selected');
+		document.querySelector('#results').classList.remove('available', 'unavailable');
+		document.querySelector('#results').classList.add(['available', 'unavailable'][random(0,1)]);
+
+		document.querySelector('#domaininfo .domainheader').textContent = domain;
+		document.querySelector('#domaininfo .registrarbuttonlist').innerHTML = '';
+		document.querySelector('#domaininfo .registrarbuttonlist').appendChild(generateButtons());
+	})
+
+	/*var domainHeader = document.createElement('h2');
+	domainHeader.classList.add('domainheader');
+	domainHeader.textContent = domain;
+	mobileDomainInfo.appendChild(domainHeader);*/
 
 	/*for(var i = 0; i < tlds.length; i++) {
 		var tld_span = document.createElement('span');

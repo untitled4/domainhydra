@@ -17,7 +17,7 @@ TODO
 	*[X] Make input fixed when scroll too far, but not title
 	 [X] fill space taken from input
 *[ ] Work on generators
-*[ ] create buttons in domaininfo for different registrars (begin collecting registrar affiliates)
+*[X] create buttons in domaininfo for different registrars (begin collecting registrar affiliates)
  [X] Copyright section
  [ ] Privacy policy
  [ ] Facebook share button
@@ -41,6 +41,7 @@ TODO
  [X] Use fontawesome for now, can reduce loadtime later
  [X] Implement fontawesome
  [X] Hide box before entering tags
+ [ ] Put registrar buttons in table to display 2 columns per row
 */
 
 document.querySelector('.year').textContent = new Date().getFullYear();
