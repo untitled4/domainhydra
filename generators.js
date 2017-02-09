@@ -37,6 +37,8 @@ function createDomainResult(domain, tlds) {
 		this.classList.add('selected');
 		document.querySelector('#results').classList.remove('available', 'unavailable');
 		document.querySelector('#results').classList.add(['available', 'unavailable'][random(0,1)]);
+
+		document.querySelector('#domaininfo .domainheader').textContent = domain;
 	})
 
 	var domainDiv = document.createElement('span');
