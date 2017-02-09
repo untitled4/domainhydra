@@ -38,7 +38,7 @@
 	visibility: visible;
 }
 
-#results.unavailable .domainresult.selected {
+/*#results.unavailable .domainresult.selected {
 	background: #f76892;
 	background: -webkit-linear-gradient(to left, #f76892 , #8E54E9);
 	background: linear-gradient(to left, #f76892 , #8E54E9);
@@ -47,7 +47,7 @@
 	background: #4776E6;
 	background: -webkit-linear-gradient(to left, #4776E6 , #8E54E9);
 	background: linear-gradient(to left, #4776E6 , #8E54E9);
-}
+}*/
 
 .domainresult .mobiledomaininfo {
 	display: block;

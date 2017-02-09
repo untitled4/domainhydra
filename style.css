@@ -288,9 +288,12 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 #results {
 	margin: auto;
 	margin-top: 40px;
-	display: flex;
+	display: none;
 	width: 500px;
 	border-radius: 10px;
+}
+#results.available, #results.unavailable {
+	display: flex;
 }
 
 #domainlist, #domaininfo {

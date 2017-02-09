@@ -9,16 +9,14 @@ TODO
  [ ] Put Generate button inside input container
  [X] Mobile
 	*[X] input width 100%
-	*[ ] domaininfo as accordion with domain name list
+	*[X] domaininfo as accordion with domain name list
 	 [X] colour address bar
-	 [ ] scrolling input
+	 [ ] X scrolling input
 	 [X] Make text bigger
 	 [X] Put angle icons in .domainresult
 	*[X] Make input fixed when scroll too far, but not title
 	 [X] fill space taken from input
 *[ ] Work on generators
- [X] make domains link to GoDaddy
-*[...] make domains link to GoDaddy affiliate links
 *[ ] create buttons in domaininfo for different registrars (begin collecting registrar affiliates)
  [X] Copyright section
  [ ] Privacy policy
@@ -37,12 +35,12 @@ TODO
  [X] Make inputing tags work on mobile
  [?] Possibly switch to `onbeforeinput` instead of `oninput`
  [X] Make background color of #domaininfo change
- [ ] Make domain name in #domaininfo change
+ [X] Make domain name in #domaininfo change
  [ ] Add GoDaddy button in #domaininfo
  [ ] Add BlueHost button in #domaininfo (only for certain domains :P)
  [X] Use fontawesome for now, can reduce loadtime later
  [X] Implement fontawesome
-
+ [X] Hide box before entering tags
 */
 
 document.querySelector('.year').textContent = new Date().getFullYear();
