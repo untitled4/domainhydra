@@ -15,7 +15,7 @@ TODO
 	 [X] Make text bigger
 	 [X] Put angle icons in .domainresult
 	*[X] Make input fixed when scroll too far, but not title
-	 [ ] fill space taken from input 
+	 [X] fill space taken from input
 *[ ] Work on generators
  [X] make domains link to GoDaddy
 *[...] make domains link to GoDaddy affiliate links
@@ -155,7 +155,9 @@ inputcontainer_el.addEventListener('click', function(e) {
 window.addEventListener('scroll', function() {
 	if(document.body.scrollTop > scrollHeightMarker) {
 		stickonscroll.classList.add('fixed');
+		emptyspace.style.height = freeSpaceMarker + 'px';
 	} else {
 		stickonscroll.classList.remove('fixed');
+		emptyspace.style.height = 0;
 	}
 })

@@ -8,3 +8,6 @@ var inputcontainer_el = document.querySelector('#inputcontainer');
 
 var stickonscroll = document.querySelector('#stickonscroll');
 var scrollHeightMarker = stickonscroll.offsetTop;
+
+var emptyspace = document.querySelector('#emptyspace');
+var freeSpaceMarker = stickonscroll.offsetHeight;
