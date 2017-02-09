@@ -158,6 +158,8 @@ window.addEventListener('scroll', function() {
 		emptyspace.style.height = freeSpaceMarker + 'px';
 	} else {
 		stickonscroll.classList.remove('fixed');
+		freeSpaceMarker = stickonscroll.offsetHeight;
+		scrollHeightMarker = stickonscroll.offsetTop;
 		emptyspace.style.height = 0;
 	}
 })

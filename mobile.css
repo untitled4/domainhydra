@@ -75,15 +75,13 @@
 	position: fixed;
 	top: 0;
 
-	-webkit-user-select: none;  /* Chrome all / Safari all */
-	-moz-user-select: none;     /* Firefox all */
-	-ms-user-select: none;      /* IE 10+ */
-	user-select: none;
+	pointer-events: none;
 }
 
-#stickonscroll.fixed * {
-	-webkit-user-select: all;  /* Chrome all / Safari all */
-	-moz-user-select: all;     /* Firefox all */
-	-ms-user-select: all;      /* IE 10+ */
-	user-select: all;
+#stickonscroll.fixed > * {
+	pointer-events: all;
+}
+
+#emptyspace {
+	display: block;
 }

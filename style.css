@@ -365,3 +365,7 @@ background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, F
 	height: 0;
 	overflow: hidden;
 }
+
+#emptyspace {
+	display: none;
+}
